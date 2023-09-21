@@ -34,7 +34,6 @@ export default function Signup() {
           // Handle the error appropriately, e.g., show an error message to the user
         }
       }
-      
     const onChange = (event)=>{
         setcredentials({...credentials,[event.target.name] : event.target.value})
     }
