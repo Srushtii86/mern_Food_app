@@ -21,7 +21,6 @@ export default function Signup() {
           email: credentials.email,
           geolocation: credentials.geolocation,
           password: credentials.password,
-          address: credentials.address,
         }),
       });
 
@@ -30,12 +29,13 @@ export default function Signup() {
       }
 
       const json = await response.json();
-
-      if (!json.success) {
-        alert("Enter valid credentials");
-      }
+      console.log(json);
+      // if (!json.success) {
+      //   alert("Enter valid credentials");
+      // }
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Error:",error);
+      alert("Enter valid credentials");
       // Handle the error appropriately, e.g., show an error message to the user
     }
   };
@@ -94,7 +94,7 @@ export default function Signup() {
               placeholder="Enter Address"
             />
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary bg-success">
             Submit
           </button>
           <Link to="/Login" className="m-3 btn btn-danger">
